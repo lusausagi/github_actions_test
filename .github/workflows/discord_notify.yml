@@ -3,8 +3,8 @@ name: discord notify
 on: [push, workflow_dispatch]
 
 jobs:
-#   test:
-#     runs-on: ubuntu-latest
+  test:
+    runs-on: ubuntu-latest
        
     steps:
       - name: Actions Status Discord
