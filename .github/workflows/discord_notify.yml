@@ -12,3 +12,6 @@ jobs:
         if: always()
         with:
           webhook: ${{ secrets.DISCORD_WEBHOOK }}
+          nodetail: true
+          title: "Hi!"
+          username: GitHub Actions
