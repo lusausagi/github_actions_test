@@ -1,0 +1,15 @@
+name: discord notify
+
+on: [push, workflow_dispatch]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+       
+    steps:
+    - uses: rjstone/discord-webhook-notify@v1.0.4
+    - name: Discord Notify
+      with:
+        severity: info
+        details: test notify.
+        webhookUrl: ${{ secrets.DISCORD_WEBHOOK }}
