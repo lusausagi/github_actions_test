@@ -7,11 +7,8 @@ jobs:
     runs-on: ubuntu-latest
        
     steps:
-    - run : | 
-        echo "Hello"
-#     - uses: rjstone/discord-webhook-notify@v1.0.4
-#     - name: Discord Notify
-#       with:
-#         severity: info
-#         details: test notify.
-#         webhookUrl: ${{ secrets.DISCORD_WEBHOOK }}
+      - name: Actions Status Discord
+        uses: sarisia/actions-status-discord@v1.8.5
+        if: always()
+        with:
+          webhook: ${{ secrets.DISCORD_WEBHOOK }}
